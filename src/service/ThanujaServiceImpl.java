@@ -18,7 +18,7 @@ import net.proteanit.sql.DbUtils;
  * @author Thanuja Chamika
  */
 public class ThanujaServiceImpl {
-    private Connection conn = DBConnect.connect();;
+    private Connection conn = DBConnect.connect();
     private PreparedStatement pst;
     
     //adding users to database
@@ -80,7 +80,7 @@ public class ThanujaServiceImpl {
             pst.execute();
 
         } catch (SQLException ex) {
-            System.out.println("Deletion dailed");
+            System.out.println("Deletion failed");
             System.out.println(ex);           
         }
     }
