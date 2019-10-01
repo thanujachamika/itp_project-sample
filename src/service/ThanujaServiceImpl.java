@@ -10,8 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import model.User;
 import net.proteanit.sql.DbUtils;
 
@@ -20,14 +18,11 @@ import net.proteanit.sql.DbUtils;
  * @author Thanuja Chamika
  */
 public class ThanujaServiceImpl {
-    private Connection conn;
+    private Connection conn = DBConnect.connect();;
     private PreparedStatement pst;
     
     //adding users to database
     public void addUser(User u) {
-
-        conn = DBConnect.connect();
-
         try {
             String query = "INSERT INTO user (username, password)"
                     + " VALUES ( '" + u.getUsername() + "' , '" + u.getPassword()  + "')";

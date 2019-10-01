@@ -16,12 +16,12 @@ import service.ThanujaServiceImpl;
  */
 public class NewJFrame extends javax.swing.JFrame {
     ThanujaServiceImpl t = new ThanujaServiceImpl();
-    
     /**
      * Creates new form NewJFrame
      */
     public NewJFrame() {
         initComponents();
+        t.userTableLoad(jTable1);
     }
 
     /**
@@ -167,8 +167,7 @@ public class NewJFrame extends javax.swing.JFrame {
         
         jTextField1.setText(username);
         jTextField2.setText(password);
-        jTextField3.setText(id);
-        
+        jTextField3.setText(id);       
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
